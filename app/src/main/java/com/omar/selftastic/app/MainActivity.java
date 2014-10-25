@@ -47,7 +47,7 @@ public class MainActivity extends ActionBarActivity {
                 startActivityForResult(i, CAPTURE_IMAGE_ACTIVITY_REQ);
             }
         });
-    }
+    }//just commit
 
     private File getOutputPhotoFile() {
         File directory = new File(Environment.getExternalStoragePublicDirectory(
