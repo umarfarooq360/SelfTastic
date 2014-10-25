@@ -25,7 +25,7 @@ public class MainActivity extends ActionBarActivity {
 
         Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
-        fileUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
+        //fileUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
         i.putExtra(MediaStore.EXTRA_OUTPUT , fileUri);
 
         startActivityForResult(i, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);

@@ -9,6 +9,9 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.hardware.Camera;
+import android.hardware.Camera.CameraInfo;
+import android.widget.Toast;
 
 import java.io.File;
 
@@ -16,6 +19,8 @@ public class CallCamera extends Activity {
 
     private static final String TAG = "CallCamera";
     private static final int CAPTURE_IMAGE_ACTIVITY_REQ = 0;
+    private Camera camera;
+    int cameraId  =0 ;
 
     Uri fileUri = null;
     ImageView photoImage = null;
@@ -23,17 +28,23 @@ public class CallCamera extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        photoImage = (ImageView) findViewById(R.id.photo_image);
 
-        Button callCameraButton = (Button) findViewById(R.id.button_callcamera);
-        callCameraButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                File file = getOutputPhotoFile();
-                fileUri = Uri.fromFile(getOutputPhotoFile());
-                i.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
-                startActivityForResult(i, CAPTURE_IMAGE_ACTIVITY_REQ );
-            }
-        });
+       // cameraId = findFrontFacingCamera();
+
+        camera = Camera.open(cameraId);
+
+        if (cameraId < 0) {
+
+            Toast.makeText(this, "No front facing camera found.",
+
+                    Toast.LENGTH_LONG).show();
+
+        }
+
     }
+
+
+
+
 }
+

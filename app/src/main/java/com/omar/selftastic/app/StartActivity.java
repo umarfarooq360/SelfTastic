@@ -9,13 +9,22 @@ import android.view.MenuItem;
 
 public class StartActivity extends ActionBarActivity {
 
+    private android.os.Handler handler = new android.os.Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-        finish();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Do something after 10s = 10000ms
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                finish();
+                // You could do this call if you wanted it to be periodic:
+            }
+        }, 3000);
 
     }
 

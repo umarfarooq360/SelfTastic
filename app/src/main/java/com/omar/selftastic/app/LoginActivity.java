@@ -26,7 +26,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import mport java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -40,9 +40,7 @@ import java.util.List;
  */
 public class LoginActivity extends Activity {
 
-    /**
-     * A dummy authentication store containing known user names and passwords.
-    
+
 
 
     // UI references.
@@ -61,13 +59,6 @@ public class LoginActivity extends Activity {
         // Find the Google+ sign in button.
 
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
-        mEmailSignInButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //login   ;
-            }
-        });
 
     }
 
