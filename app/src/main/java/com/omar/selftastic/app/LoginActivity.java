@@ -5,8 +5,10 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.ExtractedTextRequest;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 /**
@@ -37,6 +39,16 @@ public class LoginActivity extends Activity {
 
     private void onLogin() {
         SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        // we take the username introduced
+        TextView user = (TextView) findViewById(R.id.email);
+        ExtractedTextRequest request = new ExtractedTextRequest();
+        user.extractText(request, Friends.myUser);
+
+        // we take the password introduced
+        TextView pass = (TextView) findViewById(R.id.email);
+        ExtractedTextRequest requestPass = new ExtractedTextRequest();
+        pass.extractText(requestPass, Friends.myShh);
+
     }
 }
 

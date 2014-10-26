@@ -33,7 +33,7 @@ public class StartActivity extends ActionBarActivity {
             @Override
             public void run() {
                 // Do something after 10s = 10000ms
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 finish();
                 // You could do this call if you wanted it to be periodic:
             }

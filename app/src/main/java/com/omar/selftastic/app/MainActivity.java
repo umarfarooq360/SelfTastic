@@ -43,6 +43,8 @@ public class MainActivity extends ActionBarActivity {
             LocationListener locationListener = new LocationListener() {
                 public void onLocationChanged(Location location) {
                     Log.d("Location : ", location.toString());
+                    Friends.currentLocation = location;
+                    Friends.currentTime = System.currentTimeMillis();
                 }
 
                 public void onStatusChanged(String provider, int status, Bundle extras) {
