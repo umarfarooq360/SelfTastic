@@ -1,21 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <Button
+        android:id="@+id/button_callcamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="@string/get_photo" />
+
+    <ImageView
+        android:id="@+id/photo_image"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-        <Button
-            android:id="@+id/button_callcamera"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="18dp"
-            android:text="@string/get_photo" />
-        <ImageView
-            android:id="@+id/photo_image"
-            android:contentDescription="will vary; image taken from camera"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="80dp"
-          />
-    </RelativeLayout>
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:contentDescription="will vary; image taken from camera" />
+</RelativeLayout>

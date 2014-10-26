@@ -17,5 +17,9 @@
         dex="/home/paro/Workspace/SelfTastic/app/build/intermediates/pre-dexed/debug/classes-436c22eb68a226e6be0539c2fd00ba257b013b25.jar"
         jar="/home/paro/Workspace/SelfTastic/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/classes.jar"
         jumboMode="false" revision="19.1.0" sha1="95fd37732ec852e99f07eeb516a3650172f1d136" />
+    <item
+        dex="/home/paro/Workspace/SelfTastic/app/build/intermediates/pre-dexed/debug/classes-5e49b1cd9b5b6475e209ae9f1e0a6aecc63799dd.jar"
+        jar="/home/paro/Workspace/SelfTastic/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.11/classes.jar"
+        jumboMode="false" revision="19.1.0" sha1="0f700f6802ba1a1f1fa7ac26d5db0666a89d75a6" />
 
 </pre-dex-items>
